@@ -18,6 +18,9 @@ spec:
         - name: docker-registry
           image: registry:2
           imagePullPolicy: IfNotPresent
+          env:
+            - name: REGISTRY_STORAGE_DELETE_ENABLED
+              value: "true"
           resources:
             limits:
               memory: 512Mi
